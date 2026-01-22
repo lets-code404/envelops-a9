@@ -1,0 +1,281 @@
+export interface Product {
+  id: string
+  name: string
+  description: string
+  price: number
+  originalPrice: number | null
+  category: string
+  size: string
+  sizes: string[]
+  color: string
+  colors: string[]
+  badge: string | null
+  inStock: boolean
+  specifications: {
+    material: string
+    weight: string
+    closure: string
+    packSize: string
+  }
+}
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Premium White A4 Envelope",
+    description: "Crisp white envelopes perfect for professional correspondence and official documents. Made from high-quality paper with a smooth finish.",
+    price: 299,
+    originalPrice: 399,
+    category: "a4",
+    size: "A4",
+    sizes: ["A4", "A5", "DL"],
+    color: "White",
+    colors: ["White", "Cream", "Grey"],
+    badge: "Bestseller",
+    inStock: true,
+    specifications: {
+      material: "Premium Bond Paper",
+      weight: "120 GSM",
+      closure: "Self-adhesive strip",
+      packSize: "Pack of 50",
+    },
+  },
+  {
+    id: "2",
+    name: "Kraft Brown Classic",
+    description: "Eco-friendly kraft envelopes with a rustic, natural look. Perfect for businesses with an environmental focus or vintage-style branding.",
+    price: 249,
+    originalPrice: null,
+    category: "brown",
+    size: "A5",
+    sizes: ["A4", "A5", "C5"],
+    color: "Brown",
+    colors: ["Brown", "Natural", "Tan"],
+    badge: null,
+    inStock: true,
+    specifications: {
+      material: "Recycled Kraft Paper",
+      weight: "100 GSM",
+      closure: "Gummed flap",
+      packSize: "Pack of 100",
+    },
+  },
+  {
+    id: "3",
+    name: "Royal Blue Matte",
+    description: "Stunning matte blue envelopes that make your correspondence stand out. Ideal for invitations, announcements, and special occasions.",
+    price: 349,
+    originalPrice: 449,
+    category: "colored",
+    size: "A4",
+    sizes: ["A4", "A5", "Square"],
+    color: "Blue",
+    colors: ["Blue", "Navy", "Teal"],
+    badge: "New",
+    inStock: true,
+    specifications: {
+      material: "Matte Coated Paper",
+      weight: "130 GSM",
+      closure: "Peel & seal",
+      packSize: "Pack of 25",
+    },
+  },
+  {
+    id: "4",
+    name: "Vintage Cream Envelope",
+    description: "Elegant cream-colored envelopes with a subtle texture. Perfect for wedding invitations, formal events, and luxury correspondence.",
+    price: 279,
+    originalPrice: null,
+    category: "colored",
+    size: "A5",
+    sizes: ["A5", "C5", "Square"],
+    color: "Cream",
+    colors: ["Cream", "Ivory", "Pearl"],
+    badge: null,
+    inStock: true,
+    specifications: {
+      material: "Textured Linen Paper",
+      weight: "135 GSM",
+      closure: "Self-adhesive strip",
+      packSize: "Pack of 50",
+    },
+  },
+  {
+    id: "5",
+    name: "Business Grey Professional",
+    description: "Sophisticated grey envelopes for corporate communications. Conveys professionalism and attention to detail.",
+    price: 329,
+    originalPrice: 399,
+    category: "a4",
+    size: "A4",
+    sizes: ["A4", "DL", "C4"],
+    color: "Grey",
+    colors: ["Grey", "Charcoal", "Silver"],
+    badge: "Sale",
+    inStock: true,
+    specifications: {
+      material: "Premium Office Paper",
+      weight: "120 GSM",
+      closure: "Self-adhesive strip",
+      packSize: "Pack of 50",
+    },
+  },
+  {
+    id: "6",
+    name: "Coral Pink Delight",
+    description: "Vibrant coral pink envelopes that add a pop of color to your mailings. Great for creative businesses and personal correspondence.",
+    price: 359,
+    originalPrice: null,
+    category: "colored",
+    size: "A5",
+    sizes: ["A5", "C5", "Square"],
+    color: "Pink",
+    colors: ["Pink", "Coral", "Blush"],
+    badge: "Popular",
+    inStock: true,
+    specifications: {
+      material: "Smooth Finish Paper",
+      weight: "125 GSM",
+      closure: "Peel & seal",
+      packSize: "Pack of 30",
+    },
+  },
+  {
+    id: "7",
+    name: "Executive Black",
+    description: "Sleek black envelopes for premium presentations and VIP correspondence. Makes a powerful first impression.",
+    price: 399,
+    originalPrice: 499,
+    category: "colored",
+    size: "A4",
+    sizes: ["A4", "A5", "DL"],
+    color: "Black",
+    colors: ["Black", "Onyx"],
+    badge: "Premium",
+    inStock: true,
+    specifications: {
+      material: "Luxury Matte Paper",
+      weight: "140 GSM",
+      closure: "Peel & seal",
+      packSize: "Pack of 20",
+    },
+  },
+  {
+    id: "8",
+    name: "Brown Kraft Window",
+    description: "Professional kraft envelopes with a clear window. Perfect for invoices, statements, and business mailings.",
+    price: 289,
+    originalPrice: null,
+    category: "brown",
+    size: "DL",
+    sizes: ["DL", "C5"],
+    color: "Brown",
+    colors: ["Brown", "Tan"],
+    badge: null,
+    inStock: true,
+    specifications: {
+      material: "Kraft Paper with Window",
+      weight: "90 GSM",
+      closure: "Self-adhesive strip",
+      packSize: "Pack of 100",
+    },
+  },
+  {
+    id: "9",
+    name: "Custom Printed Corporate",
+    description: "Customizable envelopes with your logo and branding. Minimum order of 500 pieces for bulk corporate orders.",
+    price: 549,
+    originalPrice: null,
+    category: "printed",
+    size: "A4",
+    sizes: ["A4", "A5", "DL", "C4"],
+    color: "White",
+    colors: ["White", "Cream", "Kraft"],
+    badge: "Custom",
+    inStock: true,
+    specifications: {
+      material: "Premium Print Paper",
+      weight: "120 GSM",
+      closure: "Your choice",
+      packSize: "Minimum 500",
+    },
+  },
+  {
+    id: "10",
+    name: "Wedding Invitation Pearl",
+    description: "Luxurious pearl-finish envelopes designed specifically for wedding invitations. Adds elegance to your special day.",
+    price: 429,
+    originalPrice: 529,
+    category: "printed",
+    size: "Square",
+    sizes: ["Square", "A5"],
+    color: "Pearl",
+    colors: ["Pearl", "Ivory", "Blush"],
+    badge: "Wedding",
+    inStock: true,
+    specifications: {
+      material: "Pearlescent Paper",
+      weight: "150 GSM",
+      closure: "Peel & seal",
+      packSize: "Pack of 25",
+    },
+  },
+  {
+    id: "11",
+    name: "Eco Green Recycled",
+    description: "100% recycled envelopes in a natural green tint. Perfect for eco-conscious businesses and individuals.",
+    price: 269,
+    originalPrice: null,
+    category: "colored",
+    size: "A5",
+    sizes: ["A4", "A5", "C5"],
+    color: "Green",
+    colors: ["Green", "Sage", "Olive"],
+    badge: "Eco",
+    inStock: true,
+    specifications: {
+      material: "100% Recycled Paper",
+      weight: "100 GSM",
+      closure: "Gummed flap",
+      packSize: "Pack of 75",
+    },
+  },
+  {
+    id: "12",
+    name: "Security Tinted Blue",
+    description: "Secure envelopes with internal tinting to protect sensitive documents. Essential for confidential business correspondence.",
+    price: 379,
+    originalPrice: null,
+    category: "a4",
+    size: "A4",
+    sizes: ["A4", "DL", "C4"],
+    color: "White",
+    colors: ["White"],
+    badge: "Security",
+    inStock: true,
+    specifications: {
+      material: "Security Paper",
+      weight: "130 GSM",
+      closure: "Peel & seal",
+      packSize: "Pack of 50",
+    },
+  },
+]
+
+export const categories = [
+  { id: "all", name: "All Products" },
+  { id: "a4", name: "A4 Envelopes" },
+  { id: "a5", name: "A5 Envelopes" },
+  { id: "brown", name: "Brown Kraft" },
+  { id: "colored", name: "Colored" },
+  { id: "printed", name: "Printed" },
+]
+
+export const sizes = ["A4", "A5", "DL", "C4", "C5", "Square"]
+export const colors = ["White", "Cream", "Brown", "Blue", "Grey", "Pink", "Black", "Green", "Pearl"]
+export const priceRanges = [
+  { label: "Under ₹250", min: 0, max: 250 },
+  { label: "₹250 - ₹350", min: 250, max: 350 },
+  { label: "₹350 - ₹450", min: 350, max: 450 },
+  { label: "Above ₹450", min: 450, max: 1000 },
+]
