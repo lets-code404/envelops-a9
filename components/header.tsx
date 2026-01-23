@@ -12,8 +12,8 @@ import { cn } from "@/lib/utils"
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Bulk Orders", href: "/bulk-orders" },
+  { name: "Price List", href: "/price-list" },
+  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
@@ -49,7 +49,7 @@ export function Header() {
             href="/"
             className="text-2xl font-serif font-bold text-primary tracking-tight hover:scale-105 transition-transform"
           >
-            Envelop
+            Niharika Traders
           </Link>
 
           {/* Desktop Navigation */}
@@ -124,6 +124,14 @@ export function Header() {
                 )}
               </Button>
             </Link>
+            <div className="flex items-center gap-2 border-l pl-4 border-border ml-2">
+              <Link href="/login">
+                <Button variant="ghost" size="sm">Login</Button>
+              </Link>
+              <Link href="/signup">
+                <Button size="sm">Sign Up</Button>
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

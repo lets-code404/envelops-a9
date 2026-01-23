@@ -1,9 +1,12 @@
-# Envelop - Premium Envelope E-commerce Store
+# Niharika Traders - Premium Indian Shagun Cards & Envelopes
 
 ## Overview
-This is a Next.js 16 e-commerce website for premium envelopes, featuring:
-- Product browsing with gallery
-- Bulk ordering capabilities
+This is a Next.js 16 e-commerce website for Niharika Traders, featuring:
+- Heritage branding since 1990
+- Product browsing with shagun-specific categories
+- Wholesale and retail pricing
+- Blog for industry insights
+- User authentication (Login/Signup)
 - Modern UI with Tailwind CSS and Radix UI components
 
 ## Tech Stack

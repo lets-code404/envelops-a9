@@ -9,9 +9,9 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: 'Envelop - Premium Envelopes & Stationery',
-  description: 'Quality envelopes for every occasion. From retail to bulk corporate orders, we deliver excellence across India.',
-  keywords: ['envelopes', 'stationery', 'bulk orders', 'corporate stationery', 'India'],
+  title: 'Niharika Traders - Premium Indian Shagun Cards & Envelopes Since 1990',
+  description: 'Luxury shagun envelopes and traditional cards. Wholesale and retail stationery experts since 1990, delivering across India.',
+  keywords: ['shagun envelopes', 'wedding envelopes', 'Niharika Traders', 'bulk envelopes India', 'traditional shagun cards'],
     generator: 'v0.app'
 }
 

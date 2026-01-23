@@ -33,11 +33,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-3xl font-serif font-bold">
-              Envelop
+              Niharika Traders
             </Link>
             <p className="mt-4 text-background/80 leading-relaxed max-w-sm">
-              Premium quality envelopes and stationery for every occasion. 
-              Trusted by businesses and individuals across India since 2010.
+              Premium quality Indian shagun envelopes and cards. 
+              Serving excellence and tradition across India since 1990.
             </p>
             <div className="flex gap-4 mt-6">
               <a
@@ -156,7 +156,7 @@ export function Footer() {
       <div className="border-t border-background/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/60">
-            <p>&copy; {new Date().getFullYear()} Envelop. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Niharika Traders. Since 1990.</p>
             <div className="flex gap-6">
               {footerLinks.policies.map((link) => (
                 <Link

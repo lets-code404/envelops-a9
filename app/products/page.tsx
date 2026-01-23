@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { SiteLayout } from "@/components/site-layout"
@@ -95,6 +95,13 @@ export default function ProductsPage() {
   }, [filteredProducts, currentPage])
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage)
+
+  // Ensure current page is valid when filters change
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(totalPages)
+    }
+  }, [totalPages, currentPage])
 
   const clearFilters = () => {
     setSearch("")
