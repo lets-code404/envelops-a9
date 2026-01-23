@@ -122,9 +122,9 @@ export default function ProductsPage() {
               Our Products
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Discover our complete range of premium envelopes. From professional 
-              business correspondence to elegant invitations, find the perfect 
-              envelope for every occasion.
+              Discover our complete range of premium Indian Shagun envelopes. 
+              Luxury, tradition, and quality craftsmanship since the 1990s.
+              Wholesale and bulk orders available for retail partners.
             </p>
           </div>
         </div>

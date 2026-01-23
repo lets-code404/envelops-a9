@@ -134,25 +134,24 @@ export function ProductCard({ product, viewMode, index }: ProductCardProps) {
           </div>
         </div>
 
-        {/* Badge */}
-        {product.badge && (
-          <Badge
-            className={cn(
-              "absolute top-4 left-4 font-semibold",
-              product.badge === "Bestseller" && "bg-primary text-primary-foreground",
-              product.badge === "New" && "bg-accent text-accent-foreground",
-              product.badge === "Sale" && "bg-destructive text-destructive-foreground",
-              product.badge === "Popular" && "bg-foreground text-background",
-              product.badge === "Premium" && "bg-amber-500 text-white",
-              product.badge === "Custom" && "bg-indigo-500 text-white",
-              product.badge === "Wedding" && "bg-pink-500 text-white",
-              product.badge === "Eco" && "bg-green-500 text-white",
-              product.badge === "Security" && "bg-blue-600 text-white"
-            )}
-          >
-            {product.badge}
-          </Badge>
-        )}
+          {product.badge && (
+            <Badge
+              className={cn(
+                "absolute top-4 left-4 font-semibold",
+                product.badge === "Bestseller" && "bg-primary text-primary-foreground",
+                product.badge === "New" && "bg-accent text-accent-foreground",
+                product.badge === "Sale" && "bg-destructive text-destructive-foreground",
+                product.badge === "Popular" && "bg-foreground text-background",
+                product.badge === "Premium" && "bg-amber-500 text-white",
+                product.badge === "Wholesale" && "bg-indigo-500 text-white",
+                product.badge === "Luxury" && "bg-pink-500 text-white",
+                product.badge === "Budget Friendly" && "bg-green-500 text-white",
+                product.badge === "High Value" && "bg-blue-600 text-white"
+              )}
+            >
+              {product.badge}
+            </Badge>
+          )}
 
         {/* Quick Actions */}
         <div

@@ -262,17 +262,14 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                     </>
                   )}
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={() => setIsLiked(!isLiked)}
-                  className={cn("h-14 px-6 bg-transparent", isLiked && "text-red-500 border-red-500")}
-                >
-                  <Heart className="h-5 w-5" fill={isLiked ? "currentColor" : "none"} />
+                <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base font-semibold">
+                  <Link href="/contact">Enquire for Bulk</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="h-14 px-6 bg-transparent">
-                  <Share2 className="h-5 w-5" />
-                </Button>
+              </div>
+
+              <div className="p-4 bg-primary/5 border border-primary/10 rounded-xl">
+                <p className="text-sm font-medium text-primary">Wholesale / Bulk Available</p>
+                <p className="text-xs text-muted-foreground mt-1">Perfect for weddings, shagun, and corporate gifting. Contact us for wholesale rates.</p>
               </div>
 
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">

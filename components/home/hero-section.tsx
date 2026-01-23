@@ -59,27 +59,20 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <Sparkles className="h-4 w-4" />
-            <span className="text-sm font-medium">Premium Quality Since 2010</span>
+            <span className="text-sm font-medium">Luxury & Tradition Since the 1990s</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-            <span
-              className={cn(
-                "inline-block transition-all duration-500",
-                isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
-              )}
-            >
-              {headlines[currentHeadline]}
-            </span>
+            Niharika Traders:
             <br />
-            <span className="text-primary">With Every Envelope</span>
+            <span className="text-primary">Heritage of Shagun</span>
           </h1>
 
           {/* Subtext */}
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            From elegant invitations to professional business correspondence, 
-            discover envelopes that make every message unforgettable.
+            Premium Indian Shagun Cards & Envelopes since the 1990s. 
+            Luxury, tradition, and quality craftsmanship for your most special moments.
           </p>
 
           {/* CTA Buttons */}
@@ -89,17 +82,17 @@ export function HeroSection() {
                 size="lg"
                 className="group h-14 px-8 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
               >
-                Shop Envelopes
+                Explore Collection
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/bulk-orders">
+            <Link href="/price-list">
               <Button
                 size="lg"
                 variant="outline"
                 className="h-14 px-8 text-base font-semibold border-2 border-foreground/20 hover:bg-foreground hover:text-background transition-all bg-transparent"
               >
-                Bulk Orders
+                View Price List
               </Button>
             </Link>
           </div>
@@ -107,9 +100,9 @@ export function HeroSection() {
           {/* Stats */}
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-700">
             {[
-              { value: "50K+", label: "Happy Customers" },
-              { value: "100+", label: "Product Varieties" },
-              { value: "15+", label: "Years Experience" },
+              { value: "30+", label: "Years of Legacy" },
+              { value: "500+", label: "Design Varieties" },
+              { value: "India", label: "Wide Delivery" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-primary">
