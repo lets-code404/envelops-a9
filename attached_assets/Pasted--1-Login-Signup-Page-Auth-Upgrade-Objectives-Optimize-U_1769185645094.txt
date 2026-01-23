@@ -1,0 +1,263 @@
+🔐 1. Login / Signup Page (Auth Upgrade)
+Objectives:
+
+Optimize UI/UX (cleaner, faster, responsive)
+
+Add Google Authentication
+
+Implement secure session-based authentication
+
+Requirements:
+
+Add Google OAuth login (use modern auth approach)
+
+Maintain login & logout sessions
+
+Store user data securely in backend:
+
+Name
+
+Email
+
+Login method (Google / Password)
+
+Session status
+
+Passwords must be hashed
+
+Persist sessions across refresh
+
+Redirect authenticated users properly
+
+🏠 2. Home Page Updates
+✅ Maintain this exact Product Price List (no changes):
+
+(keep as structured data / constant)
+
+1. Colour Board Coin – ₹260 / 100 pcs
+2. Screen Printing Plain – ₹125 / 100 pcs
+3. Screen Printing Coin – ₹450 / 100 pcs
+4. One Shot Coin – ₹400 / 100 pcs
+5. One Shot Plain – ₹250 / 100 pcs
+6. Fancy Dori – ₹425 / 100 pcs
+7. Pocket Envelope – ₹225 / 100 pcs
+8. Note Envelope – ₹875 / 100 pcs
+9. Gaddi Box Envelope – ₹200 / 10 pcs
+10. Single Envelope – ₹100 / 25 pcs
+11. Plain Stand Envelope – ₹175 / 100 pcs
+12. Gaddi Box Red & Maroon – ₹2000 / 10 pcs
+13. Gaddi Box Laser Rose – ₹2000 / 10 pcs
+14. Gaddi Box Leaf – ₹1000 / 10 pcs
+15. Off Side Plain Stand – ₹125 / 100 pcs
+
+🔍 3. Navbar Search Toggle
+
+Make the search icon functional
+
+Clicking search icon should toggle a search input
+
+Smooth open/close animation
+
+Search should filter products by name (client-side is acceptable)
+
+🛍️ 4. Shop by Type – Category Restructure
+❌ REMOVE these categories:
+
+A4 Envelopes
+
+A5 Envelopes
+
+Brown Craft
+
+Coloured
+
+✅ ADD these 4 Wedding Categories (with descriptions):
+🟣 Basic & Economy Wedding Envelopes
+
+Includes:
+
+Screen Printing Plain
+
+One Shot Plain
+
+Plain Stand Envelope
+
+Off Side Plain Stand
+
+Single Envelope
+
+Description:
+Plain, functional, price-efficient. Ideal for bulk orders, temples, small weddings.
+
+🟠 Printed & Decorative Wedding Envelopes
+
+Includes:
+
+Screen Printing Coin
+
+One Shot Coin
+
+Colour Board Coin
+
+Description:
+Traditional printed styles with moderate design appeal. Popular in North Indian weddings.
+
+🟢 Premium & Fancy Wedding Envelopes
+
+Includes:
+
+Fancy Dori
+
+Pocket Envelope
+
+Note Envelope
+
+Description:
+High-margin, premium designs for stylish weddings and close family gifting.
+
+🔴 Gaddi Box & Special Occasion Envelopes
+
+Includes:
+
+Gaddi Box Envelope
+
+Gaddi Box Leaf
+
+Gaddi Box Red & Maroon
+
+Gaddi Box Laser Rose
+
+Description:
+Luxury envelopes for heavy cash gifting and elite family ceremonies.
+
+⭐ 5. Featured Collection (Homepage)
+
+Highlight ONLY these products:
+
+Note Envelope
+
+₹875 / 100 pcs
+
+Premium & elite wedding use
+
+Fancy Dori
+
+Decorative, festive, luxury feel
+
+Suitable for hero section / carousel
+
+Pocket Envelope
+
+Modern premium style
+
+High conversion item
+
+💬 6. Testimonials Section – Replace Content
+
+Replace existing feedback with these exact testimonials:
+
+Rahul Verma, Delhi
+“The envelope quality was much better than what we usually find in the local market…”
+
+Neha Jain, Jaipur
+“We ordered Fancy Dori and Pocket Envelopes…”
+
+Sandeep Aggarwal, Ghaziabad
+“Gaddi Box envelopes were excellent in build…”
+
+Pooja Sharma, Lucknow
+“The envelopes gave a rich and traditional feel…”
+
+Amit Khanna, Chandigarh
+“Packaging, consistency, and finish were all on point…”
+
+📨 7. Footer – Newsletter Enhancement
+
+Add smooth transition / micro-interaction
+
+On email input focus → subtle animation
+
+On submit → success feedback (toast or inline)
+
+Validate email before submit
+
+📄 8. Footer Pages (Create Routes + Content)
+
+Create new pages and routes:
+
+/privacy-policy
+
+/terms-of-service
+
+/shipping-policy
+
+/return-policy
+
+Use the exact legal content provided (Indian IT Act, Consumer Protection Act, E-commerce Rules compliant).
+
+Ensure:
+
+Clean typography
+
+Section headings
+
+Mobile responsive
+
+Footer links route correctly
+
+📝 9. Blog Page
+Blog Listing Page:
+
+Show blog cards
+
+Add Read More CTA
+
+Create Individual Routes:
+
+/blog/shagun-envelope-significance
+
+/blog/choose-wedding-envelope
+
+/blog/niharika-traders-journey
+
+Each route should render full blog content provided, properly formatted with:
+
+Headings
+
+Paragraph spacing
+
+SEO-friendly structure
+
+❓ 10. FAQ Page
+
+Create /faq page
+
+Use provided FAQ content
+
+Implement accordion UI
+
+Group by sections (Basic, Product, Shipping, Values)
+
+Add final CTA line:
+
+“Every wedding and family function is special. If you need guidance, we’re here to help.”
+
+✅ Final Acceptance Criteria
+
+No placeholder content left
+
+No broken routes
+
+UI remains premium & consistent
+
+Mobile-friendly
+
+All new pages linked correctly
+
+Auth works end-to-end
+
+❗ IMPORTANT
+
+Do NOT invent content.
+Do NOT remove existing working logic unless required.
+Do NOT downgrade design quality.

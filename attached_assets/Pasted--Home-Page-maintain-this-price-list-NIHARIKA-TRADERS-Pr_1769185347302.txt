@@ -1,0 +1,457 @@
+# Home Page 
+
+
+maintain this price list:
+
+NIHARIKA TRADERS – Product Rate List
+
+S.NO	TYPES	COLOUR	QUANTITY PER BOX	RATE (₹)
+1	Colour Board Coin	10	100 pcs	260
+2	Screen Printing Plain	2	100 pcs	125
+3	Screen Printing Coin	2	100 pcs	450
+4	One Shot Coin	5	100 pcs	400
+5	One Shot Plain	5	100 pcs	250
+6	Fancy Dori	5	100 pcs	425
+7	Pocket Envelope	5	100 pcs	225
+8	Note Envelope	3	100 pcs	875
+9	Gaddi Box Envelope	5	10 pcs	200
+10	Single Envelope	5	25 pcs	100
+11	Plain Stand Envelope	5	100 pcs	175
+12	Gaddi Box Red & Maroon	2	10 pcs	2000
+13	Gaddi Box Laser Rose	2	10 pcs	2000
+14	Gaddi Box Leaf	5	10 pcs	1000
+15	Off Side Plain Stand	1	100 pcs	125
+
+
+
+In Nav Bar make searching toggle working
+
+
+change in category shop by type section:
+
+remove a4 envelopes, a5 envelopes, brown craft and coloured
+replace them with wedding envelops categories like
+
+🟣 1. Basic & Economy Wedding Envelopes
+
+For bulk orders, simple ceremonies, budget-conscious buyers
+
+These are plain, functional, and price-efficient.
+
+Screen Printing Plain
+
+One Shot Plain
+
+Plain Stand Envelope
+
+Off Side Plain Stand
+
+Single Envelope
+
+Why this category:
+Low design complexity, high volume demand, perfect for temples, small weddings, and mass distribution.
+
+🟠 2. Printed & Decorative Wedding Envelopes
+
+For traditional weddings with some design appeal
+
+These offer printed elements or moderate styling without going luxury.
+
+Screen Printing Coin
+
+One Shot Coin
+
+Colour Board Coin
+
+Why this category:
+Mid-range pricing, visual appeal, very popular in North Indian weddings.
+
+🟢 3. Premium & Fancy Wedding Envelopes
+
+For stylish weddings and premium gifting
+
+Design, material, and finish matter here.
+
+Fancy Dori
+
+Pocket Envelope
+
+Note Envelope
+
+Why this category:
+These are high-margin items and should be showcased prominently on your website.
+
+🔴 4. Gaddi Box & Special Occasion Envelopes
+
+For cash gifting, close relatives, and luxury ceremonies
+
+These are niche, premium, and purpose-specific.
+
+Gaddi Box Envelope
+
+Gaddi Box Leaf
+
+Gaddi Box Red & Maroon
+
+Gaddi Box Laser Rose
+
+Why this category:
+Used for shagun, heavy cash gifts, and elite functions—buyers expect exclusivity here.
+
+
+
+
+mention them in featured collection:
+Note Envelope
+
+Highest rate (₹875 / 100 pcs)
+
+Looks premium, used in elite weddings
+
+✅ Absolute homepage material
+
+Fancy Dori
+
+Decorative, festive, traditional-luxury feel
+
+Strong visual appeal
+
+✅ Great for hero section / featured carousel
+
+Pocket Envelope
+
+Modern + premium
+
+Very popular in contemporary weddings
+
+✅ Strong conversion item
+
+
+
+
+Replace current feedback content in feedback section:
+1. Rahul Verma, Delhi
+“The envelope quality was much better than what we usually find in the local market. The finish looked premium and suited our wedding functions perfectly. Guests actually noticed the envelopes.”
+
+2. Neha Jain, Jaipur
+“We ordered Fancy Dori and Pocket Envelopes for family shagun. The designs were elegant and delivery was smooth. Very satisfied with the overall experience.”
+
+3. Sandeep Aggarwal, Ghaziabad
+“Gaddi Box envelopes were excellent in build and presentation. Worth the price for important ceremonies. Will definitely reorder for future family events.”
+
+4. Pooja Sharma, Lucknow
+“The envelopes gave a rich and traditional feel. Colors were exactly as shown and the quality felt premium. Good option if you want something classy.”
+
+5. Amit Khanna, Chandigarh
+“Packaging, consistency, and finish were all on point. These envelopes truly matched the standard we expect for wedding shagun. Reliable seller.”
+
+
+
+footer:
+in the last newsletter section add some transitions when someone enters their gmail and submit
+
+
+
+in the last of footer section build these pages: 
+Privacy Policy
+Terms of Service
+Shipping Policy
+Return Policy
+
+
+content of these four pages
+
+Below is **production-ready, legally structured content** you can directly use on your website for **Niharika Traders (India)**.
+This is aligned with **Indian IT Act, 2000**, **Consumer Protection Act, 2019**, **E-commerce Rules, 2020**, and modern digital trade practices.
+
+> ⚠️ Note: This is **strong standard compliance content**, suitable for real businesses. You can paste it as-is.
+
+---
+
+# 📜 Privacy Policy
+
+**Effective Date:** [Insert Date]
+**Last Updated:** [Insert Date]
+
+Niharika Traders (“we”, “our”, “us”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and protect information when you visit or purchase from our website.
+
+---
+
+## 1. Information We Collect
+
+We may collect the following information:
+
+### a) Personal Information
+
+* Name
+* Phone number
+* Email address
+* Billing & shipping address
+
+### b) Order & Transaction Information
+
+* Products ordered
+* Payment method (we do **not** store card/UPI details)
+* Order history
+
+### c) Technical Information
+
+* IP address
+* Browser type
+* Device information
+* Cookies and usage data
+
+---
+
+## 2. How We Use Your Information
+
+We use your data to:
+
+* Process and deliver orders
+* Communicate order updates
+* Respond to queries or support requests
+* Improve website experience
+* Comply with legal obligations
+
+---
+
+## 3. Data Protection & Security
+
+We follow reasonable security practices as mandated under:
+
+* **Information Technology Act, 2000**
+* **IT (Reasonable Security Practices) Rules, 2011**
+
+Your data is protected against unauthorized access, misuse, or disclosure.
+
+---
+
+## 4. Cookies Policy
+
+Our website uses cookies to:
+
+* Improve site performance
+* Understand user behavior
+* Enhance browsing experience
+
+You may disable cookies through your browser settings.
+
+---
+
+## 5. Sharing of Information
+
+We **do not sell or rent** personal data.
+Information may be shared only with:
+
+* Delivery partners (for shipping)
+* Payment gateways (for transactions)
+* Government authorities (if legally required)
+
+---
+
+## 6. User Rights
+
+You have the right to:
+
+* Access your personal data
+* Request correction or deletion
+* Withdraw consent (subject to legal obligations)
+
+---
+
+## 7. Policy Updates
+
+This policy may be updated periodically. Continued use of the website implies acceptance of changes.
+
+---
+
+## 8. Contact Information
+
+For privacy-related concerns:
+📧 **Email:** [Insert Official Email]
+
+---
+
+# 📘 Terms of Service
+
+**Effective Date:** [Insert Date]
+
+By accessing or using the website of **Niharika Traders**, you agree to the following terms.
+
+---
+
+## 1. Business Information
+
+Niharika Traders is engaged in the manufacturing and wholesale/retail of wedding envelopes, shagun envelopes, and related products within India.
+
+---
+
+## 2. Eligibility
+
+You must be:
+
+* At least 18 years old
+* Legally capable of entering into contracts
+
+---
+
+## 3. Product Information
+
+* Product images are for representation purposes
+* Minor color/design variations may occur due to printing and material availability
+* All prices are listed in INR (₹)
+
+---
+
+## 4. Orders & Payments
+
+* Orders are confirmed only after successful payment
+* We reserve the right to cancel orders due to pricing or stock errors
+
+---
+
+## 5. Intellectual Property
+
+All website content including:
+
+* Images
+* Logos
+* Text
+* Designs
+
+are the intellectual property of **Niharika Traders** and may not be copied without written permission.
+
+---
+
+## 6. Limitation of Liability
+
+We are not liable for:
+
+* Indirect or incidental damages
+* Delays due to courier partners
+* Force majeure events (natural disasters, strikes, etc.)
+
+---
+
+## 7. Governing Law
+
+These terms are governed by **laws of India**, and disputes are subject to the jurisdiction of **Indian courts**.
+
+---
+
+# 🚚 Shipping Policy
+
+**Shipping Coverage:** India Only 🇮🇳
+
+---
+
+## 1. Processing Time
+
+* Order processing: **2–4 business days**
+* Bulk/custom orders may require additional time
+
+---
+
+## 2. Delivery Time
+
+* Metro cities: **3–6 business days**
+* Non-metro / remote areas: **5–10 business days**
+
+Delivery timelines may vary due to external factors.
+
+---
+
+## 3. Shipping Charges
+
+* Shipping charges are calculated at checkout
+* Bulk orders may have custom shipping rates
+
+---
+
+## 4. Courier Partners
+
+We use reliable third-party logistics partners.
+Once dispatched, tracking details will be shared with the customer.
+
+---
+
+## 5. Delays & Non-Delivery
+
+We are not responsible for delays caused by:
+
+* Courier issues
+* Natural calamities
+* Incorrect address provided by the customer
+
+---
+
+# 🔄 Return & Refund Policy
+
+At **Niharika Traders**, we maintain strict quality checks. Due to the nature of wedding and shagun envelopes, returns are limited.
+
+---
+
+## 1. Return Eligibility
+
+Returns are accepted **only if**:
+
+* Wrong product delivered
+* Product damaged during transit
+
+Return request must be raised within **48 hours** of delivery.
+
+---
+
+## 2. Non-Returnable Items
+
+The following are **non-returnable**:
+
+* Customized or bulk orders
+* Products damaged due to customer handling
+* Orders placed with incorrect specifications
+
+---
+
+## 3. Refund Process
+
+* Approved refunds will be processed within **7–10 business days**
+* Refunds will be issued to the original payment method
+
+---
+
+## 4. Exchange Policy
+
+Exchanges are subject to:
+
+* Product availability
+* Inspection approval
+
+---
+
+## 5. Cancellation Policy
+
+* Orders can be cancelled **before dispatch only**
+* Once shipped, cancellation is not allowed
+
+---
+
+## 6. Contact for Returns
+
+📧 **Email:** [Insert Support Email]
+📞 **Phone:** [Optional]
+
+---
+
+## ✅ Final Recommendation (Important)
+
+Add these links clearly in your website footer:
+
+* Privacy Policy
+* Terms of Service
+* Shipping Policy
+* Return & Refund Policy
+
+
+
+
+
