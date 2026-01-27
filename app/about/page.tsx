@@ -1,12 +1,12 @@
-import { SiteLayout } from "@/components/site-layout"
-import { Award, Users, Target, Heart } from "lucide-react"
+import { SiteLayout } from "@/components/site-layout";
+import { Award, Users, Target, Heart } from "lucide-react";
 
 const stats = [
   { value: "15+", label: "Years of Excellence" },
   { value: "50K+", label: "Happy Customers" },
   { value: "100+", label: "Product Varieties" },
   { value: "500+", label: "Corporate Clients" },
-]
+];
 
 const values = [
   {
@@ -33,7 +33,7 @@ const values = [
     description:
       "Committed to eco-friendly practices and sustainable materials for a greener tomorrow.",
   },
-]
+];
 
 const timeline = [
   {
@@ -72,7 +72,7 @@ const timeline = [
     description:
       "Launched our online platform to serve customers nationwide with ease.",
   },
-]
+];
 
 export default function AboutPage() {
   return (
@@ -86,8 +86,8 @@ export default function AboutPage() {
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
               For over 15 years, we've been crafting premium envelopes that help
-              businesses and individuals make lasting impressions. Every envelope
-              tells a story, and we're here to help you tell yours.
+              businesses and individuals make lasting impressions. Every
+              envelope tells a story, and we're here to help you tell yours.
             </p>
           </div>
         </div>
@@ -133,15 +133,16 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Our founder, with decades of experience in the paper industry,
-                  recognized the gap between mass-produced, generic envelopes and
-                  the quality that businesses truly needed. This vision led to
-                  the creation of Envelop - where quality meets affordability.
+                  recognized the gap between mass-produced, generic envelopes
+                  and the quality that businesses truly needed. This vision led
+                  to the creation of Envelop - where quality meets
+                  affordability.
                 </p>
                 <p>
-                  Today, we serve thousands of customers across India, from small
-                  businesses to Fortune 500 companies. Our commitment to quality,
-                  innovation, and customer satisfaction remains unchanged since
-                  day one.
+                  Today, we serve thousands of customers across India, from
+                  small businesses to Fortune 500 companies. Our commitment to
+                  quality, innovation, and customer satisfaction remains
+                  unchanged since day one.
                 </p>
               </div>
             </div>
@@ -149,7 +150,9 @@ export default function AboutPage() {
               <div className="aspect-[4/3] bg-muted rounded-3xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-3/4 h-3/4 border-8 border-dashed border-muted-foreground/30 rounded-2xl flex items-center justify-center">
-                    <span className="text-muted-foreground/50">Our Journey</span>
+                    <span className="text-muted-foreground/50">
+                      Our Journey
+                    </span>
                   </div>
                 </div>
               </div>
@@ -279,5 +282,5 @@ export default function AboutPage() {
         </div>
       </section>
     </SiteLayout>
-  )
+  );
 }
