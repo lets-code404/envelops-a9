@@ -1,14 +1,18 @@
 "use client"
 
 import { useState } from "react"
+<<<<<<< HEAD
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
+=======
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 import Link from "next/link"
 import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+<<<<<<< HEAD
 import { Separator } from "@/components/ui/separator"
 import { toast } from "sonner"
 import { User, Mail, Lock, Eye, EyeOff, Loader2 } from "lucide-react"
@@ -75,10 +79,24 @@ export default function SignUpPage() {
 
   const handleGoogleSignUp = () => {
     signIn("google", { callbackUrl: "/" })
+=======
+import { Checkbox } from "@/components/ui/checkbox"
+
+export default function SignupPage() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Signup logic would go here
+    console.log("Signup attempt:", { name, email, password })
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
   }
 
   return (
     <SiteLayout>
+<<<<<<< HEAD
       <div className="min-h-[80vh] flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md shadow-xl border-0 bg-card/80 backdrop-blur-sm">
           <CardHeader className="text-center space-y-2">
@@ -199,6 +217,71 @@ export default function SignUpPage() {
               </Link>
             </p>
           </CardFooter>
+=======
+      <div className="container mx-auto px-4 py-20 flex justify-center">
+        <Card className="w-full max-w-md shadow-lg border-border">
+          <CardHeader className="space-y-1 text-center">
+            <CardTitle className="text-3xl font-serif font-bold">Create Account</CardTitle>
+            <CardDescription>
+              Join Niharika Traders for exclusive wholesale offers
+            </CardDescription>
+          </CardHeader>
+          <form onSubmit={handleSubmit}>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="name">Full Name</Label>
+                <Input 
+                  id="name" 
+                  placeholder="John Doe" 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required 
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="name@example.com" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required 
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password">Password</Label>
+                <Input 
+                  id="password" 
+                  type="password" 
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required 
+                />
+              </div>
+              <div className="flex items-center space-x-2">
+                <Checkbox id="terms" required />
+                <label
+                  htmlFor="terms"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  I agree to the terms and conditions
+                </label>
+              </div>
+            </CardContent>
+            <CardFooter className="flex flex-col space-y-4">
+              <Button type="submit" className="w-full h-12 text-base font-semibold">
+                Sign Up
+              </Button>
+              <div className="text-center text-sm text-muted-foreground">
+                Already have an account?{" "}
+                <Link href="/login" className="text-primary font-semibold hover:underline">
+                  Login
+                </Link>
+              </div>
+            </CardFooter>
+          </form>
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
         </Card>
       </div>
     </SiteLayout>

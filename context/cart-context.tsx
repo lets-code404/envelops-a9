@@ -1,6 +1,10 @@
 "use client"
 
+<<<<<<< HEAD
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+=======
+import { createContext, useContext, useState, type ReactNode } from "react"
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
 export interface CartItem {
   id: string
@@ -24,6 +28,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
 
+<<<<<<< HEAD
 const CART_STORAGE_KEY = "niharika-cart"
 
 export function CartProvider({ children }: { children: ReactNode }) {
@@ -49,6 +54,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items))
     }
   }, [items, isHydrated])
+=======
+export function CartProvider({ children }: { children: ReactNode }) {
+  const [items, setItems] = useState<CartItem[]>([])
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
   const addItem = (item: CartItem) => {
     setItems((prev) => {
@@ -80,10 +89,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
     )
   }
 
+<<<<<<< HEAD
   const clearCart = () => {
     setItems([])
     localStorage.removeItem(CART_STORAGE_KEY)
   }
+=======
+  const clearCart = () => setItems([])
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
   const totalPrice = items.reduce(

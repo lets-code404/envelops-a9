@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+<<<<<<< HEAD
 import { useSession, signOut } from "next-auth/react"
 import { Menu, X, ShoppingCart, User, LogOut, Package, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -10,12 +11,24 @@ import { useCart } from "@/context/cart-context"
 import { SearchBar } from "@/components/ui/search-bar"
 import { cn } from "@/lib/utils"
 import { categories } from "@/lib/products-data"
+=======
+import { Menu, X, Search, ShoppingCart } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { useCart } from "@/context/cart-context"
+import { cn } from "@/lib/utils"
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
+<<<<<<< HEAD
   { name: "Categories", href: "/categories", hasMega: true },
   { name: "Price List", href: "/price-list" },
+=======
+  { name: "Price List", href: "/price-list" },
+  { name: "Blog", href: "/blog" },
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
@@ -23,11 +36,17 @@ const navigation = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+<<<<<<< HEAD
   const [showCategories, setShowCategories] = useState(false)
   const [showUserMenu, setShowUserMenu] = useState(false)
   const pathname = usePathname()
   const { totalItems } = useCart()
   const { data: session } = useSession()
+=======
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const pathname = usePathname()
+  const { totalItems } = useCart()
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,8 +56,11 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+<<<<<<< HEAD
   const displayCategories = categories.filter((c) => c.id !== "all")
 
+=======
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
   return (
     <header
       className={cn(
@@ -61,6 +83,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navigation.map((item) => (
+<<<<<<< HEAD
               <div
                 key={item.name}
                 className="relative"
@@ -106,12 +129,67 @@ export function Header() {
                   </div>
                 )}
               </div>
+=======
+              <Link
+                key={item.name}
+                href={item.href}
+                className={cn(
+                  "relative text-sm font-medium transition-colors hover:text-primary",
+                  pathname === item.href
+                    ? "text-primary"
+                    : "text-muted-foreground"
+                )}
+              >
+                {item.name}
+                {pathname === item.href && (
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full animate-in fade-in slide-in-from-left-2" />
+                )}
+              </Link>
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
             ))}
           </div>
 
           {/* Desktop Actions */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center gap-3">
             <SearchBar />
+=======
+          <div className="hidden lg:flex items-center gap-4">
+            <div
+              className={cn(
+                "flex items-center transition-all duration-300 overflow-hidden",
+                isSearchOpen ? "w-64" : "w-10"
+              )}
+            >
+              {isSearchOpen ? (
+                <div className="flex items-center gap-2 w-full">
+                  <Input
+                    type="search"
+                    placeholder="Search products..."
+                    className="h-10 bg-secondary border-0 focus-visible:ring-primary"
+                    autoFocus
+                  />
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setIsSearchOpen(false)}
+                    className="shrink-0"
+                  >
+                    <X className="h-5 w-5" />
+                  </Button>
+                </div>
+              ) : (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsSearchOpen(true)}
+                  className="hover:bg-secondary"
+                >
+                  <Search className="h-5 w-5" />
+                </Button>
+              )}
+            </div>
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
             <Link href="/cart">
               <Button
@@ -127,6 +205,7 @@ export function Header() {
                 )}
               </Button>
             </Link>
+<<<<<<< HEAD
 
             {/* Auth Section */}
             {session?.user ? (
@@ -198,6 +277,16 @@ export function Header() {
                 </Link>
               </div>
             )}
+=======
+            <div className="flex items-center gap-2 border-l pl-4 border-border ml-2">
+              <Link href="/login">
+                <Button variant="ghost" size="sm">Login</Button>
+              </Link>
+              <Link href="/signup">
+                <Button size="sm">Sign Up</Button>
+              </Link>
+            </div>
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
           </div>
 
           {/* Mobile Menu Button */}
@@ -230,10 +319,25 @@ export function Header() {
         <div
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300",
+<<<<<<< HEAD
             isMenuOpen ? "max-h-[500px] mt-4" : "max-h-0"
           )}
         >
           <div className="py-4 space-y-2 border-t border-border">
+=======
+            isMenuOpen ? "max-h-96 mt-4" : "max-h-0"
+          )}
+        >
+          <div className="py-4 space-y-4 border-t border-border">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Search products..."
+                className="pl-10 bg-secondary border-0"
+              />
+            </div>
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -249,6 +353,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+<<<<<<< HEAD
             <hr className="my-2" />
             {session?.user ? (
               <>
@@ -272,6 +377,8 @@ export function Header() {
                 </Link>
               </div>
             )}
+=======
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
           </div>
         </div>
       </nav>

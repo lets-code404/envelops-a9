@@ -19,8 +19,13 @@ const footerLinks = {
   policies: [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
+<<<<<<< HEAD
     { name: "Shipping Policy", href: "/shipping-policy" },
     { name: "Refund Policy", href: "/refund-policy" },
+=======
+    { name: "Shipping Policy", href: "/shipping" },
+    { name: "Return Policy", href: "/returns" },
+>>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
   ],
 }
 
