@@ -9,7 +9,6 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: {
     default: 'Niharika Traders - Premium Indian Shagun Cards & Envelopes Since 1990',
     template: '%s | Niharika Traders',
@@ -55,12 +54,6 @@ export const metadata: Metadata = {
     },
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://niharika-traders.vercel.app'),
-=======
-  title: 'Niharika Traders - Premium Indian Shagun Cards & Envelopes Since 1990',
-  description: 'Luxury shagun envelopes and traditional cards. Wholesale and retail stationery experts since 1990, delivering across India.',
-  keywords: ['shagun envelopes', 'wedding envelopes', 'Niharika Traders', 'bulk envelopes India', 'traditional shagun cards'],
-    generator: 'v0.app'
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 }
 
 export default function RootLayout({
