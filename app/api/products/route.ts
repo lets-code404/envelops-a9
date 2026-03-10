@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server"
 import prisma from "@/lib/db"
 import { products as staticProducts, categories as staticCategories } from "@/lib/products-data"
 
+export const dynamic = "force-dynamic"
+
 // GET /api/products — List products with filtering, search, pagination
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams

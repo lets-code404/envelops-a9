@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import prisma from "@/lib/db"
 import { verifyRazorpaySignature } from "@/lib/razorpay"
 
+export const dynamic = "force-dynamic"
+
 // POST /api/orders/verify — Verify Razorpay payment
 export async function POST(request: Request) {
   try {

@@ -3,6 +3,8 @@ import prisma from "@/lib/db"
 import { createRazorpayOrder } from "@/lib/razorpay"
 import { auth } from "@/lib/auth"
 
+export const dynamic = "force-dynamic"
+
 // GET /api/orders — List user orders
 export async function GET() {
   try {

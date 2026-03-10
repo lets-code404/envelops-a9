@@ -3,32 +3,19 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-<<<<<<< HEAD
 import { useSession, signOut } from "next-auth/react"
 import { Menu, X, ShoppingCart, User, LogOut, Package, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useCart } from "@/context/cart-context"
 import { SearchBar } from "@/components/ui/search-bar"
+import { useCart } from "@/context/cart-context"
 import { cn } from "@/lib/utils"
 import { categories } from "@/lib/products-data"
-=======
-import { Menu, X, Search, ShoppingCart } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { useCart } from "@/context/cart-context"
-import { cn } from "@/lib/utils"
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
-<<<<<<< HEAD
   { name: "Categories", href: "/categories", hasMega: true },
   { name: "Price List", href: "/price-list" },
-=======
-  { name: "Price List", href: "/price-list" },
-  { name: "Blog", href: "/blog" },
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
@@ -36,17 +23,11 @@ const navigation = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-<<<<<<< HEAD
   const [showCategories, setShowCategories] = useState(false)
   const [showUserMenu, setShowUserMenu] = useState(false)
   const pathname = usePathname()
   const { totalItems } = useCart()
   const { data: session } = useSession()
-=======
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const pathname = usePathname()
-  const { totalItems } = useCart()
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,34 +37,27 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-<<<<<<< HEAD
   const displayCategories = categories.filter((c) => c.id !== "all")
 
-=======
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
+        "sticky top-0 z-50 w-full border-b transition-all duration-300",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md"
+          ? "bg-background/95 backdrop-blur-md shadow-sm"
           : "bg-background"
       )}
     >
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="text-2xl font-serif font-bold text-primary tracking-tight hover:scale-105 transition-transform"
-          >
+          <Link href="/" className="text-2xl font-serif font-bold text-foreground">
             Niharika Traders
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navigation.map((item) => (
-<<<<<<< HEAD
               <div
                 key={item.name}
                 className="relative"
@@ -93,35 +67,34 @@ export function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative text-sm font-medium transition-colors hover:text-primary flex items-center gap-1",
-                    pathname === item.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                    "text-sm font-medium transition-colors hover:text-primary flex items-center gap-1",
+                    pathname === item.href ? "text-primary" : "text-muted-foreground"
                   )}
                 >
                   {item.name}
                   {item.hasMega && <ChevronDown className="h-3 w-3" />}
-                  {pathname === item.href && (
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
-                  )}
                 </Link>
 
                 {/* Mega Menu */}
                 {item.hasMega && showCategories && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                    <div className="bg-card rounded-xl shadow-xl border p-4 min-w-[320px]">
-                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3 px-2">
+                  <div className="absolute top-full left-0 pt-2 z-50">
+                    <div className="bg-card rounded-xl shadow-xl border p-4 min-w-[280px]">
+                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3">
                         Shop by Category
                       </p>
-                      <div className="grid gap-1">
+                      <div className="space-y-1">
                         {displayCategories.map((cat) => (
                           <Link
                             key={cat.id}
                             href={`/categories/${cat.id}`}
-                            className="block px-3 py-2.5 rounded-lg hover:bg-muted transition-colors"
+                            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-secondary transition-colors"
                             onClick={() => setShowCategories(false)}
                           >
-                            <span className="font-medium text-sm">{cat.name}</span>
+                            <span className="text-lg">{(cat as { icon?: string }).icon || "📦"}</span>
+                            <div>
+                              <span className="text-sm font-medium">{cat.name}</span>
+                              <p className="text-xs text-muted-foreground">{cat.description}</p>
+                            </div>
                           </Link>
                         ))}
                       </div>
@@ -129,137 +102,55 @@ export function Header() {
                   </div>
                 )}
               </div>
-=======
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "relative text-sm font-medium transition-colors hover:text-primary",
-                  pathname === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                )}
-              >
-                {item.name}
-                {pathname === item.href && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full animate-in fade-in slide-in-from-left-2" />
-                )}
-              </Link>
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
             ))}
           </div>
 
-          {/* Desktop Actions */}
-<<<<<<< HEAD
-          <div className="hidden lg:flex items-center gap-3">
+          {/* Actions */}
+          <div className="flex items-center gap-3">
             <SearchBar />
-=======
-          <div className="hidden lg:flex items-center gap-4">
-            <div
-              className={cn(
-                "flex items-center transition-all duration-300 overflow-hidden",
-                isSearchOpen ? "w-64" : "w-10"
-              )}
-            >
-              {isSearchOpen ? (
-                <div className="flex items-center gap-2 w-full">
-                  <Input
-                    type="search"
-                    placeholder="Search products..."
-                    className="h-10 bg-secondary border-0 focus-visible:ring-primary"
-                    autoFocus
-                  />
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setIsSearchOpen(false)}
-                    className="shrink-0"
-                  >
-                    <X className="h-5 w-5" />
-                  </Button>
-                </div>
-              ) : (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setIsSearchOpen(true)}
-                  className="hover:bg-secondary"
-                >
-                  <Search className="h-5 w-5" />
-                </Button>
-              )}
-            </div>
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 
-            <Link href="/cart">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="relative hover:bg-secondary"
-              >
+            {/* Cart */}
+            <Button variant="ghost" size="icon" asChild className="relative">
+              <Link href="/cart">
                 <ShoppingCart className="h-5 w-5" />
                 {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center animate-in zoom-in">
+                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center font-bold">
                     {totalItems}
                   </span>
                 )}
-              </Button>
-            </Link>
-<<<<<<< HEAD
+              </Link>
+            </Button>
 
-            {/* Auth Section */}
-            {session?.user ? (
+            {/* User Menu */}
+            {session ? (
               <div
-                className="relative"
+                className="relative hidden sm:block"
                 onMouseEnter={() => setShowUserMenu(true)}
                 onMouseLeave={() => setShowUserMenu(false)}
               >
-                <Button variant="ghost" size="sm" className="gap-2">
-                  {session.user.image ? (
-                    <img
-                      src={session.user.image}
-                      alt=""
-                      className="h-6 w-6 rounded-full"
-                    />
-                  ) : (
-                    <User className="h-4 w-4" />
-                  )}
-                  <span className="max-w-[100px] truncate text-sm">
-                    {session.user.name?.split(" ")[0] || "Account"}
-                  </span>
-                  <ChevronDown className="h-3 w-3" />
+                <Button variant="ghost" size="icon">
+                  <User className="h-5 w-5" />
                 </Button>
-
                 {showUserMenu && (
-                  <div className="absolute top-full right-0 pt-2 z-50">
+                  <div className="absolute right-0 top-full pt-2 z-50">
                     <div className="bg-card rounded-xl shadow-xl border p-2 min-w-[200px]">
-                      <Link
-                        href="/account"
-                        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-muted text-sm"
-                        onClick={() => setShowUserMenu(false)}
-                      >
-                        <User className="h-4 w-4" /> My Account
+                      <p className="px-3 py-2 text-sm font-medium truncate border-b mb-1">
+                        {session.user?.name || session.user?.email}
+                      </p>
+                      <Link href="/account" className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-secondary">
+                        <User className="h-4 w-4" /> Account
                       </Link>
-                      <Link
-                        href="/orders"
-                        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-muted text-sm"
-                        onClick={() => setShowUserMenu(false)}
-                      >
-                        <Package className="h-4 w-4" /> My Orders
+                      <Link href="/orders" className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-secondary">
+                        <Package className="h-4 w-4" /> Orders
                       </Link>
-                      {(session.user as { role?: string }).role === "admin" && (
-                        <Link
-                          href="/admin"
-                          className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-muted text-sm text-primary"
-                          onClick={() => setShowUserMenu(false)}
-                        >
-                          ⚙️ Admin Panel
+                      {(session.user as { role?: string })?.role === "admin" && (
+                        <Link href="/admin" className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-secondary">
+                          <Package className="h-4 w-4" /> Admin Panel
                         </Link>
                       )}
-                      <hr className="my-1" />
                       <button
                         onClick={() => signOut({ callbackUrl: "/" })}
-                        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-destructive/10 text-sm text-destructive w-full"
+                        className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-secondary w-full text-left text-destructive"
                       >
                         <LogOut className="h-4 w-4" /> Sign Out
                       </button>
@@ -268,120 +159,66 @@ export function Header() {
                 )}
               </div>
             ) : (
-              <div className="flex items-center gap-2 border-l pl-4 border-border ml-2">
-                <Link href="/login">
-                  <Button variant="ghost" size="sm">Login</Button>
-                </Link>
-                <Link href="/signup">
-                  <Button size="sm">Sign Up</Button>
-                </Link>
-              </div>
-            )}
-=======
-            <div className="flex items-center gap-2 border-l pl-4 border-border ml-2">
-              <Link href="/login">
-                <Button variant="ghost" size="sm">Login</Button>
-              </Link>
-              <Link href="/signup">
-                <Button size="sm">Sign Up</Button>
-              </Link>
-            </div>
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 lg:hidden">
-            <Link href="/cart">
-              <Button variant="ghost" size="icon" className="relative">
-                <ShoppingCart className="h-5 w-5" />
-                {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center">
-                    {totalItems}
-                  </span>
-                )}
+              <Button asChild size="sm" className="hidden sm:flex">
+                <Link href="/login">Sign In</Link>
               </Button>
-            </Link>
+            )}
+
+            {/* Mobile menu button */}
             <Button
               variant="ghost"
               size="icon"
+              className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        <div
-          className={cn(
-            "lg:hidden overflow-hidden transition-all duration-300",
-<<<<<<< HEAD
-            isMenuOpen ? "max-h-[500px] mt-4" : "max-h-0"
-          )}
-        >
-          <div className="py-4 space-y-2 border-t border-border">
-=======
-            isMenuOpen ? "max-h-96 mt-4" : "max-h-0"
-          )}
-        >
-          <div className="py-4 space-y-4 border-t border-border">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Search products..."
-                className="pl-10 bg-secondary border-0"
-              />
-            </div>
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
+        {isMenuOpen && (
+          <div className="lg:hidden border-t py-4 space-y-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={() => setIsMenuOpen(false)}
                 className={cn(
-                  "block py-2 text-base font-medium transition-colors",
+                  "block px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                   pathname === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-primary"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:bg-secondary"
                 )}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-<<<<<<< HEAD
-            <hr className="my-2" />
-            {session?.user ? (
-              <>
-                <Link href="/account" onClick={() => setIsMenuOpen(false)} className="block py-2 text-base font-medium text-muted-foreground hover:text-primary">
-                  My Account
+            <div className="border-t pt-2 mt-2">
+              {session ? (
+                <>
+                  <Link href="/account" className="block px-4 py-2 rounded-lg text-sm hover:bg-secondary" onClick={() => setIsMenuOpen(false)}>
+                    Account
+                  </Link>
+                  <Link href="/orders" className="block px-4 py-2 rounded-lg text-sm hover:bg-secondary" onClick={() => setIsMenuOpen(false)}>
+                    Orders
+                  </Link>
+                  <button
+                    onClick={() => { signOut({ callbackUrl: "/" }); setIsMenuOpen(false) }}
+                    className="block w-full text-left px-4 py-2 rounded-lg text-sm text-destructive hover:bg-secondary"
+                  >
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <Link href="/login" className="block px-4 py-2 rounded-lg text-sm font-medium text-primary hover:bg-secondary" onClick={() => setIsMenuOpen(false)}>
+                  Sign In
                 </Link>
-                <Link href="/orders" onClick={() => setIsMenuOpen(false)} className="block py-2 text-base font-medium text-muted-foreground hover:text-primary">
-                  My Orders
-                </Link>
-                <button onClick={() => signOut({ callbackUrl: "/" })} className="block py-2 text-base font-medium text-destructive">
-                  Sign Out
-                </button>
-              </>
-            ) : (
-              <div className="flex gap-3 pt-2">
-                <Link href="/login" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="outline" size="sm">Login</Button>
-                </Link>
-                <Link href="/signup" onClick={() => setIsMenuOpen(false)}>
-                  <Button size="sm">Sign Up</Button>
-                </Link>
-              </div>
-            )}
-=======
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
+              )}
+            </div>
           </div>
-        </div>
-      </nav>
+        )}
+      </div>
     </header>
   )
 }

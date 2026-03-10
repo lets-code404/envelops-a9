@@ -4,10 +4,7 @@ import { CategoriesSection } from "@/components/home/categories-section"
 import { FeaturedProducts } from "@/components/home/featured-products"
 import { TrustIndicators } from "@/components/home/trust-indicators"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
-<<<<<<< HEAD
 import { FAQSection } from "@/components/home/faq-section"
-=======
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
 import { NewsletterSection } from "@/components/home/newsletter-section"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -15,43 +12,37 @@ import Link from "next/link"
 export default function HomePage() {
   return (
     <SiteLayout>
+      {/* Announcement Bar */}
       <div className="bg-primary text-primary-foreground py-2 text-center text-sm font-medium">
-<<<<<<< HEAD
         🎉 Serving Luxury & Tradition Since the 1990s • Free Shipping Above ₹500 • Nationwide Delivery
       </div>
       <HeroSection />
+      <TrustIndicators />
+      <CategoriesSection />
+      <FeaturedProducts />
+      <TestimonialsSection />
+      <FAQSection />
 
-=======
-        Serving Luxury & Tradition Since the 1990s • Nationwide Delivery in India
-      </div>
-      <HeroSection />
-      
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
-      <section className="py-12 border-y border-border bg-muted/30">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2">Wholesale & Bulk Inquiries</h2>
-            <p className="text-muted-foreground">Get exclusive pricing for retail stores and bulk requirements. Our heritage of 30+ years ensures quality and trust.</p>
-          </div>
-          <div className="flex gap-4">
-            <Button asChild size="lg">
-              <Link href="/price-list">View Wholesale Price List</Link>
+      {/* CTA Section */}
+      <section className="py-16 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+            Ready to Place Your Order?
+          </h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+            Browse our complete collection or get in touch for bulk pricing and custom requirements.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Button asChild size="lg" className="text-base px-8">
+              <Link href="/products">Browse Products</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/contact">Contact for Bulk</Link>
+            <Button asChild variant="outline" size="lg" className="text-base px-8">
+              <Link href="/bulk-orders">Bulk Order Inquiry</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      <CategoriesSection />
-      <FeaturedProducts />
-      <TrustIndicators />
-      <TestimonialsSection />
-<<<<<<< HEAD
-      <FAQSection />
-=======
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
       <NewsletterSection />
     </SiteLayout>
   )

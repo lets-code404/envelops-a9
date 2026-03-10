@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import prisma from "@/lib/db"
 import { products as staticProducts } from "@/lib/products-data"
 
+export const dynamic = "force-dynamic"
+
 // GET /api/products/[id]
 export async function GET(
   request: Request,

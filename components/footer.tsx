@@ -19,13 +19,8 @@ const footerLinks = {
   policies: [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
-<<<<<<< HEAD
     { name: "Shipping Policy", href: "/shipping-policy" },
     { name: "Refund Policy", href: "/refund-policy" },
-=======
-    { name: "Shipping Policy", href: "/shipping" },
-    { name: "Return Policy", href: "/returns" },
->>>>>>> b1ca6fad81de2d4436bc8e3e5034e6825c26450a
   ],
 }
 
@@ -45,22 +40,13 @@ export function Footer() {
               Serving excellence and tradition across India since 1990.
             </p>
             <div className="flex gap-4 mt-6">
-              <a
-                href="#"
-                className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
+              <a href="#" className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a
-                href="#"
-                className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
+              <a href="#" className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="#"
-                className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
+              <a href="#" className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
@@ -72,10 +58,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
-                  >
+                  <Link href={link.href} className="text-background/70 hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -89,10 +72,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
-                  >
+                  <Link href={link.href} className="text-background/70 hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -107,26 +87,18 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-background/70 text-sm">
-                  123 Paper Street, Stationery Lane,
-                  <br />
-                  Mumbai, Maharashtra 400001
+                  123 Paper Street, Stationery Lane,<br />Mumbai, Maharashtra 400001
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <a
-                  href="tel:+919876543210"
-                  className="text-background/70 text-sm hover:text-primary transition-colors"
-                >
+                <a href="tel:+919876543210" className="text-background/70 text-sm hover:text-primary transition-colors">
                   +91 98765 43210
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <a
-                  href="mailto:hello@envelop.in"
-                  className="text-background/70 text-sm hover:text-primary transition-colors"
-                >
+                <a href="mailto:hello@envelop.in" className="text-background/70 text-sm hover:text-primary transition-colors">
                   hello@envelop.in
                 </a>
               </li>
@@ -164,11 +136,7 @@ export function Footer() {
             <p>&copy; {new Date().getFullYear()} Niharika Traders. Since 1990.</p>
             <div className="flex gap-6">
               {footerLinks.policies.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="hover:text-primary transition-colors"
-                >
+                <Link key={link.name} href={link.href} className="hover:text-primary transition-colors">
                   {link.name}
                 </Link>
               ))}
